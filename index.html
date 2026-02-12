@@ -1,200 +1,200 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Healthy India Foods</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
 <style>
-
-body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: #ffffff;
-    color: #333;
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+color:#222;
+background:#fff;
 }
 
-header {
-    background: #ffffff;
-    padding: 20px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-    position: sticky;
-    top: 0;
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+background:#fff;
+box-shadow:0 3px 10px rgba(0,0,0,0.05);
 }
 
-.logo {
-    font-size: 22px;
-    font-weight: 700;
-    color: #8B5E3C;
+.logo{
+font-size:24px;
+font-weight:800;
+color:#E67E22;
 }
 
-nav a {
-    margin-left: 25px;
-    text-decoration: none;
-    color: #333;
-    font-weight: 500;
+nav a{
+margin-left:25px;
+text-decoration:none;
+color:#333;
+font-weight:500;
 }
 
-.hero {
-    height: 90vh;
-    background: linear-gradient(rgba(255,255,255,0.6), rgba(255,255,255,0.6)),
-    url('https://images.unsplash.com/photo-1608198093002-ad4e005484ec?q=80&w=1600');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    padding: 0 8%;
+.hero{
+background:#f8f3ed;
+padding:80px 8%;
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+justify-content:space-between;
 }
 
-.hero-text {
-    max-width: 600px;
+.hero-text{
+max-width:500px;
 }
 
-.hero-text h1 {
-    font-size: 48px;
-    margin-bottom: 20px;
-    color: #5C4033;
+.hero-text h1{
+font-size:42px;
+color:#5C4033;
 }
 
-.hero-text p {
-    font-size: 18px;
-    margin-bottom: 30px;
+.hero-text p{
+font-size:18px;
+margin:20px 0;
 }
 
-.btn {
-    background: #8B5E3C;
-    color: white;
-    padding: 12px 30px;
-    border: none;
-    text-decoration: none;
-    border-radius: 5px;
+.hero img{
+width:400px;
+max-width:100%;
 }
 
-.section {
-    padding: 80px 8%;
-    text-align: center;
+.btn{
+display:inline-block;
+background:#E67E22;
+color:#fff;
+padding:12px 25px;
+border-radius:5px;
+text-decoration:none;
+font-weight:600;
 }
 
-.section h2 {
-    font-size: 32px;
-    margin-bottom: 40px;
-    color: #5C4033;
+.section{
+padding:80px 8%;
+text-align:center;
 }
 
-.products {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
+.section h2{
+font-size:34px;
+margin-bottom:40px;
+color:#5C4033;
 }
 
-.card {
-    width: 280px;
-    background: #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
-    transition: 0.3s;
+.product-card{
+max-width:500px;
+margin:auto;
 }
 
-.card:hover {
-    transform: translateY(-10px);
+.product-card img{
+width:100%;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
 }
 
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
+.journey{
+background:#f4efe9;
 }
 
-.card h3 {
-    margin: 20px 0 10px;
+.journey-content{
+max-width:900px;
+margin:auto;
+font-size:17px;
+line-height:1.8;
 }
 
-.card p {
-    padding: 0 15px 20px;
-    font-size: 14px;
+.founder{
+margin-top:50px;
 }
 
-.footer {
-    background: #5C4033;
-    color: white;
-    text-align: center;
-    padding: 30px;
+.founder img{
+width:180px;
+height:180px;
+border-radius:50%;
+object-fit:cover;
+box-shadow:0 10px 25px rgba(0,0,0,0.2);
 }
 
-@media(max-width: 768px){
-    .hero-text h1 {
-        font-size: 32px;
-    }
-    .products {
-        flex-direction: column;
-        align-items: center;
-    }
+.footer{
+background:#5C4033;
+color:#fff;
+padding:25px;
+text-align:center;
 }
 
+@media(max-width:768px){
+.hero{
+flex-direction:column;
+text-align:center;
+}
+.hero-text h1{
+font-size:30px;
+}
+}
 </style>
 </head>
 
 <body>
 
 <header>
-    <div class="logo">Healthy India Foods</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#contact">Contact</a>
-    </nav>
+<div class="logo">Healthy India Foods</div>
+<nav>
+<a href="#product">Product</a>
+<a href="#journey">Our Story</a>
+<a href="#contact">Contact</a>
+</nav>
 </header>
 
 <section class="hero">
-    <div class="hero-text">
-        <h1>Pure Wheat. Pure Taste.</h1>
-        <p>Premium quality atta and food products crafted with care for every Indian kitchen.</p>
-        <a href="#products" class="btn">Explore Products</a>
-    </div>
+<div class="hero-text">
+<h1>Fresh Chakki Atta</h1>
+<p>Pure • Natural • 100% Whole Wheat</p>
+<a href="#product" class="btn">Explore Product</a>
+</div>
+<img src="IMG_20260130_235644_501.jpg">
 </section>
 
-<section class="section" id="about">
-    <h2>About Us</h2>
-    <p>Healthy India Foods is committed to delivering high-quality wheat flour and staple food products using modern milling techniques while preserving natural nutrition.</p>
+<section class="section" id="product">
+<h2>Our Product</h2>
+<div class="product-card">
+<img src="IMG_20260130_235644_501.jpg">
+<p>Healthy India Foods Fresh Chakki Atta is made from carefully selected whole wheat grains ensuring softness, nutrition and authentic taste in every roti.</p>
+</div>
 </section>
 
-<section class="section" id="products">
-    <h2>Our Products</h2>
-    <div class="products">
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1625944526533-8e748ba25a17?q=80&w=800">
-            <h3>Premium Chakki Atta</h3>
-            <p>Stone-ground whole wheat flour with rich fiber and natural taste.</p>
-        </div>
+<section class="section journey" id="journey">
+<h2>Our Journey</h2>
+<div class="journey-content">
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1604908177225-42c13b2e39c5?q=80&w=800">
-            <h3>Multi-Grain Atta</h3>
-            <p>Blend of wheat, millet & grains for complete family nutrition.</p>
-        </div>
+<p>I was born and raised in a village where we used to eat fresh, pure chakki atta every day. The taste, aroma and quality were completely natural and healthy.</p>
 
-        <div class="card">
-            <img src="https://images.unsplash.com/photo-1604908177340-bc84d88890be?q=80&w=800">
-            <h3>Maida & Besan</h3>
-            <p>Finely processed flour products for baking & cooking needs.</p>
-        </div>
-    </div>
+<p>When I moved to the city, I realized that finding truly pure and fresh atta was very difficult. Most products lacked authenticity and freshness.</p>
+
+<p>That is when I decided to start <strong>Healthy India Foods</strong> with a single mission — to bring back the same village purity and freshness to every Indian family.</p>
+
+<p>Today, we proudly offer one focused product — <strong>Fresh Chakki Atta</strong>, made with honesty, quality and care.</p>
+
+<div class="founder">
+<img src="IMG-20240305-WA0049.jpg">
+<h3>Anant Chauhan</h3>
+<p>Founder, Healthy India Foods</p>
+</div>
+
+</div>
 </section>
 
 <section class="section" id="contact">
-    <h2>Contact Us</h2>
-    <p>Email: info@healthyindiafoods.com</p>
-    <p>Phone: +91 XXXXXXXXXX</p>
+<h2>Contact Us</h2>
+<p>Email: info@healthyindiafoods.com</p>
+<p>Phone: +91 7453083174</p>
 </section>
 
 <div class="footer">
-    © 2026 Healthy India Foods | All Rights Reserved
+© 2026 Healthy India Foods Pvt. Ltd. | All Rights Reserved
 </div>
 
 </body>
-  </html>
+</html>
