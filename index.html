@@ -4,37 +4,29 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Healthy India Foods</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
 <style>
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f5f1ea;color:#222;}
+a{text-decoration:none;color:inherit}
 
-body{
-background:#f5f1ea;
-color:#2d2d2d;
-}
-
-/* TOP OFFER BAR */
+/* OFFER BAR */
 .offer{
-background:#6b3e1f;
-color:white;
+background:#5b2d14;
+color:#fff;
 text-align:center;
-padding:8px;
+padding:10px;
 font-size:14px;
 }
 
 /* HEADER */
 header{
+background:#fff;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
-background:white;
+padding:15px 25px;
 position:sticky;
 top:0;
 z-index:1000;
@@ -42,108 +34,185 @@ box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 .logo{
-font-size:20px;
+font-size:22px;
 font-weight:700;
-color:#3c5a36;
+color:#2f4f2f;
 }
 
-.cart{
-background:#6b3e1f;
-color:white;
-padding:8px 12px;
-border-radius:20px;
-font-size:14px;
+.icons{
+display:flex;
+gap:20px;
+font-size:22px;
+cursor:pointer;
 }
 
-/* HERO */
+/* HERO SLIDER */
 .hero{
-height:80vh;
-background:url('cow ghee.png') center/cover no-repeat;
+height:90vh;
+position:relative;
+overflow:hidden;
+}
+
+.slide{
+position:absolute;
+width:100%;
+height:100%;
+background-size:cover;
+background-position:center;
 display:flex;
 align-items:center;
 justify-content:center;
 text-align:center;
-color:white;
+color:#fff;
+transition:opacity 1s ease;
 }
 
-.hero h1{
-font-size:38px;
+.slide::after{
+content:'';
+position:absolute;
+inset:0;
 background:rgba(0,0,0,0.5);
-padding:20px;
-border-radius:10px;
+}
+
+.slide-content{
+position:relative;
+z-index:2;
+}
+
+.slide h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.btn{
+background:#5b2d14;
+color:#fff;
+padding:12px 30px;
+border:none;
+border-radius:30px;
+cursor:pointer;
+font-size:16px;
+}
+
+/* SECTION */
+.section{
+padding:70px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.section h2{
+text-align:center;
+font-size:34px;
+margin-bottom:50px;
 }
 
 /* PRODUCTS */
-.section-title{
-text-align:center;
-margin:50px 0 20px;
-font-size:28px;
-}
-
 .products{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:20px;
-padding:20px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:35px;
 }
 
 .card{
-background:white;
-width:300px;
-border-radius:15px;
+background:#fff;
+border-radius:20px;
 overflow:hidden;
-box-shadow:0 10px 25px rgba(0,0,0,0.08);
+box-shadow:0 15px 30px rgba(0,0,0,0.08);
 transition:0.3s;
 }
 
-.card:hover{
-transform:translateY(-5px);
-}
+.card:hover{transform:translateY(-10px);}
 
 .card img{
 width:100%;
-height:250px;
+height:300px;
 object-fit:cover;
 }
 
 .card-body{
-padding:15px;
+padding:20px;
 text-align:center;
 }
 
 .price{
-color:#6b3e1f;
-font-size:18px;
-font-weight:700;
+font-size:20px;
+font-weight:600;
+color:#5b2d14;
 margin:10px 0;
 }
 
-.btn{
-background:#6b3e1f;
-color:white;
-padding:10px 20px;
-border:none;
+/* COMBO SECTION */
+.combo{
+background:#fff;
+padding:50px;
 border-radius:25px;
-cursor:pointer;
-transition:0.3s;
+box-shadow:0 10px 30px rgba(0,0,0,0.05);
+display:flex;
+flex-wrap:wrap;
+align-items:center;
+gap:40px;
 }
 
-.btn:hover{
-background:#3c5a36;
+.combo img{
+width:350px;
+border-radius:20px;
+}
+
+.combo-text{
+flex:1;
+}
+
+.combo-text h3{
+font-size:28px;
+margin-bottom:20px;
+}
+
+/* TESTIMONIALS */
+.testimonials{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.review{
+background:#fff;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 25px rgba(0,0,0,0.07);
+}
+
+/* NEWSLETTER */
+.newsletter{
+background:#5b2d14;
+color:#fff;
+text-align:center;
+padding:60px 20px;
+margin-top:60px;
+}
+
+.newsletter input{
+padding:12px;
+width:250px;
+border:none;
+border-radius:25px;
+margin-right:10px;
 }
 
 /* FOOTER */
 footer{
-background:#2d2d2d;
-color:white;
-padding:30px;
+background:#1f1f1f;
+color:#fff;
+padding:50px 20px;
 text-align:center;
-margin-top:50px;
 }
 
-footer p{
-margin:10px 0;
+.social{
+margin:20px 0;
+display:flex;
+justify-content:center;
+gap:20px;
+font-size:22px;
 }
 
 /* WHATSAPP FLOAT */
@@ -152,22 +221,17 @@ position:fixed;
 bottom:20px;
 right:20px;
 background:#25d366;
-color:white;
+color:#fff;
 padding:15px;
 border-radius:50%;
 font-size:22px;
-text-decoration:none;
 }
 
-/* RESPONSIVE */
+/* MOBILE */
 @media(max-width:768px){
-.hero h1{
-font-size:24px;
-}
-.products{
-flex-direction:column;
-align-items:center;
-}
+.slide h1{font-size:28px;}
+.combo{flex-direction:column;text-align:center;}
+.combo img{width:100%;}
 }
 </style>
 </head>
@@ -180,22 +244,43 @@ align-items:center;
 
 <header>
 <div class="logo">Healthy India Foods</div>
-<div class="cart">🛒 Cart</div>
+<div class="icons">☰ 🔍 🛒</div>
 </header>
 
+<!-- HERO SLIDER -->
 <section class="hero">
-<h1>Pure. Traditional. Desi Goodness.</h1>
+<div class="slide" style="background-image:url('cow ghee.png');opacity:1;">
+<div class="slide-content">
+<h1>Pure Bilona Ghee</h1>
+<button class="btn">Shop Now</button>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('mustard oil.png');opacity:0;">
+<div class="slide-content">
+<h1>Cold Pressed Mustard Oil</h1>
+<button class="btn">Explore</button>
+</div>
+</div>
+
+<div class="slide" style="background-image:url('atta.webp');opacity:0;">
+<div class="slide-content">
+<h1>Stone Ground Atta</h1>
+<button class="btn">Buy Now</button>
+</div>
+</div>
 </section>
 
-<h2 class="section-title">Our Premium Products</h2>
-
+<!-- PRODUCTS -->
+<section class="section">
+<h2>Our Products</h2>
 <div class="products">
 
 <div class="card">
 <img src="mustard oil.png">
 <div class="card-body">
 <h3>Mustard Oil</h3>
-<div class="price">₹200</div>
+<p class="price">₹200</p>
 <button class="btn">Add to Cart</button>
 </div>
 </div>
@@ -204,7 +289,7 @@ align-items:center;
 <img src="cow ghee.png">
 <div class="card-body">
 <h3>Desi Bilona Ghee</h3>
-<div class="price">₹2499</div>
+<p class="price">₹2499</p>
 <button class="btn">Add to Cart</button>
 </div>
 </div>
@@ -213,20 +298,69 @@ align-items:center;
 <img src="atta.webp">
 <div class="card-body">
 <h3>10kg Atta</h3>
-<div class="price">₹380</div>
+<p class="price">₹380</p>
 <button class="btn">Add to Cart</button>
 </div>
 </div>
 
 </div>
+</section>
+
+<!-- COMBO -->
+<section class="section">
+<div class="combo">
+<img src="cow ghee.png">
+<div class="combo-text">
+<h3>Desi Cooking Combo</h3>
+<p>Ghee + Mustard Oil + Atta at special combo price.</p>
+<p class="price">₹2,899</p>
+<button class="btn">Buy Combo</button>
+</div>
+</div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section">
+<h2>What Our Customers Say</h2>
+<div class="testimonials">
+<div class="review">⭐️⭐️⭐️⭐️⭐️  
+Best quality ghee I’ve tasted in years.</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️  
+Atta bilkul gaon jaisa hai.</div>
+<div class="review">⭐️⭐️⭐️⭐️⭐️  
+Oil ka taste pure aur strong hai.</div>
+</div>
+</section>
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+<h2>Subscribe For Offers</h2><br>
+<input type="email" placeholder="Enter your email">
+<button class="btn">Subscribe</button>
+</div>
 
 <footer>
 <h3>Healthy India Foods</h3>
-<p>Bringing Pure Desi Taste to Every Home 🇮🇳</p>
-<p>© 2026 Healthy India Foods. All Rights Reserved.</p>
+<p>Bringing Pure Desi Taste to Every Indian Home 🇮🇳</p>
+<div class="social">
+<span>📘</span>
+<span>📸</span>
+<span>▶️</span>
+</div>
+<p>© 2026 Healthy India Foods</p>
 </footer>
 
 <a href="https://wa.me/918527682495" class="whatsapp">💬</a>
+
+<script>
+let slides=document.querySelectorAll('.slide');
+let index=0;
+setInterval(()=>{
+slides[index].style.opacity=0;
+index=(index+1)%slides.length;
+slides[index].style.opacity=1;
+},4000);
+</script>
 
 </body>
     </html>
